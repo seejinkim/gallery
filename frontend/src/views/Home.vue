@@ -15,7 +15,7 @@ const state = reactive({
   if(res.status === 200) {
     state.items = res.data;
   }
-})();
+})(); 
 </script>
 
 <template>
