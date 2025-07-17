@@ -1,5 +1,5 @@
 <script setup>
-import {getItems} from "@/service/itemService";
+import {getItems} from "@/services/itemService";
 import {reactive} from "vue";
 import Card from "@/components/Card.vue";
 

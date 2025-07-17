@@ -1,6 +1,6 @@
 <script setup>
 import {useAccountStore} from "@/stores/account";
-import {logout} from "@/service/accountService";
+import {logout} from "@/services/accountService";
 import {useRouter} from "vue-router";
 
 // 계정 스토어
@@ -15,7 +15,7 @@ const logoutAccount = async () => {
 
     if(res.status === 200) {
         accountStore.setLoggedIn(false);
-        await router.push("/");
+        await router.push("/login");
     }
 };
 </script>

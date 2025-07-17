@@ -1,7 +1,7 @@
 <script setup>
-import {reactive} from 'vue';
-import {login} from "@/service/accountService";
-import {useRouter} from 'vue-router';
+import {reactive} from "vue";
+import {login} from "@/services/accountService";
+import {useRouter} from "vue-router";
 
 // 반응형 상태
 const state = reactive({
@@ -18,12 +18,12 @@ const router = useRouter();
 const submit = async () => {
     const res = await login(state.form);
 
-    switch (res.state) {
+    switch (res.status) {
         case 200:
             await router.push("/");
             break;
 
-        case 400:
+        case 404:
             window.alert("입력하신 정보와 일지하는 회원이 없습니다.");
             break;
     }

@@ -4,7 +4,7 @@ import Footer from "@/components/Footer.vue";
 import {useAccountStore} from "@/stores/account";
 import {watch} from "vue";
 import {useRoute} from "vue-router";
-import {check} from "@/service/accountService";
+import {check} from "@/services/accountService";
 
 // 계정 스토어
 const accountStore = useAccountStore();
@@ -32,7 +32,7 @@ const checkAccount = async () => {
 // 라우트 경로가 바뀔 때마다 로그인 여부를 확인
 watch(() => route.path, () => {
     checkAccount();
-})();
+});
 </script>
 
 <template>

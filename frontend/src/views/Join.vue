@@ -1,6 +1,6 @@
 <script setup>
 import {reactive} from "vue";
-import {join} from "@/service/accountService";
+import {join} from "@/services/accountService";
 import {useRouter} from "vue-router";
 
 // 반응형 상태
